@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
+    "version": {
+      "allowBranch": "master",
+      "changelogHeader": "#Nixt CHANGELOGS"
+    }
+  },
+  "version": "independent"
+}

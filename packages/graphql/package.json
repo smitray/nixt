@@ -1,0 +1,33 @@
+{
+  "name": "@nixt/graphql",
+  "version": "1.0.0",
+  "description": "Graphql server for Nixt",
+  "keywords": [
+    "Apollo",
+    "server",
+    "TypeGraphql",
+    "MikroOrm",
+    "MongoDB"
+  ],
+  "author": "Smit Ray <humancoder@outlook.com>",
+  "homepage": "https://github.com/smitray/nixt/tree/master/packages/graphql#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smitray/nixt.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/smitray/nixt/issues"
+  }
+}
