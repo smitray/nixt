@@ -1,0 +1,37 @@
+{
+  "name": "@nixt/config",
+  "version": "1.0.0",
+  "description": "Configuration package for Nixt",
+  "keywords": [
+    "dotenv",
+    "configuration"
+  ],
+  "author": "Smit Ray <humancoder@outlook.com>",
+  "homepage": "https://github.com/smitray/nixt/tree/master/packages/config#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smitray/nixt.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/smitray/nixt/issues"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^14.0.27"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
