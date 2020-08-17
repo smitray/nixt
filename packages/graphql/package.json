@@ -25,13 +25,15 @@
     "url": "git+https://github.com/smitray/nixt.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "NODE_ENV=development ts-node-dev --respawn lib/index.ts",
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/smitray/nixt/issues"
   },
   "dependencies": {
     "@date-io/date-fns": "^2.8.0",
+    "@nixt/config": "1.0.0",
     "apollo-server-koa": "^2.16.1",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.12.2",
