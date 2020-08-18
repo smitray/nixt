@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/smitray/nixt/compare/@nixt/config@1.1.0...@nixt/config@1.1.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* **fixed config:** removed dotenv from config ([92a5f75](https://github.com/smitray/nixt/commit/92a5f758aa58e07f0e17d7f20dc36049ae1fbb7f))
+
+
+
+
+
 # 1.1.0 (2020-08-17)
 
 

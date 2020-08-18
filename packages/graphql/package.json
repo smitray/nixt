@@ -1,6 +1,6 @@
 {
   "name": "@nixt/graphql",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Graphql server for Nixt",
   "keywords": [
     "Apollo",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^2.8.0",
-    "@nixt/config": "^1.1.0",
+    "@nixt/config": "^1.1.1",
     "apollo-server-koa": "^2.16.1",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.12.2",
