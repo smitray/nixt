@@ -2,7 +2,6 @@ interface EnvironmentLayout {
   port: number;
   host: string;
   mongodb: {
-    uri: string;
     db: string;
     mongoPort: number;
   };
@@ -16,7 +15,6 @@ const config: {
     port: 3000,
     host: '127.0.0.1',
     mongodb: {
-      uri: 'mongodb://localhost',
       db: 'nixt-dev',
       mongoPort: 27017,
     },
@@ -26,7 +24,6 @@ const config: {
     port: 3000,
     host: '127.0.0.1',
     mongodb: {
-      uri: 'mongodb://localhost',
       db: 'nixt-dev',
       mongoPort: 27017,
     },
@@ -36,7 +33,6 @@ const config: {
     port: 3000,
     host: '127.0.0.1',
     mongodb: {
-      uri: 'mongodb://localhost',
       db: 'nixt-dev',
       mongoPort: 27017,
     },

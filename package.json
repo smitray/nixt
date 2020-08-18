@@ -28,7 +28,8 @@
     "yarn": ">=1.22.4"
   },
   "scripts": {
-    "release": "lerna version"
+    "release": "lerna version",
+    "dev": "lerna run dev --scope @nixt/graphql --stream"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
