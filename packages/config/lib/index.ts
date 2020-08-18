@@ -1,15 +1,4 @@
-import dotenv from 'dotenv';
-
 import configEnvironment from './environment';
+import paths from './paths';
 
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
-
-const environments = result.parsed;
-
-export default {
-  ...environments,
-  ...configEnvironment[process.env.NODE_ENV],
-};
+export default { ...configEnvironment(process.env.NODE_ENV), ...paths };
