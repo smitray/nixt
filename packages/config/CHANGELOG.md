@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/smitray/nixt/compare/@nixt/config@1.1.1...@nixt/config@1.4.0) (2020-08-29)
+
+
+### Bug Fixes
+
+* **fix:** fix ([cf22e5a](https://github.com/smitray/nixt/commit/cf22e5a0538004637d7a9f5336ab8124fd6ac972))
+* **fix:** fix ([3486bf4](https://github.com/smitray/nixt/commit/3486bf4a3b76ca5f1f3ebf41106dac6e2e69a2cc))
+
+
+### Features
+
+* **account module added:** account module added with many changes ([1e0fde0](https://github.com/smitray/nixt/commit/1e0fde0c1beffb84d8c5ed78803f1bfba3b95a3d))
+* **mikroorm configured successfully:** mikroOrm configured successfully ([d60a0ea](https://github.com/smitray/nixt/commit/d60a0eaf65ec8e14d19b8dcab2a31ff448d3554f))
+
+
+
+
+
 # [1.3.0](https://github.com/smitray/nixt/compare/@nixt/config@1.1.1...@nixt/config@1.3.0) (2020-08-29)
 
 

@@ -10,7 +10,8 @@
     },
     "version": {
       "allowBranch": "master",
-      "changelogHeader": "#Nixt CHANGELOGS"
+      "changelogHeader": "#Nixt CHANGELOGS",
+      "message": "chore(release): publish"
     }
   },
   "version": "independent"
