@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/smitray/nixt/compare/@nixt/graphql@1.1.1...@nixt/graphql@1.2.0) (2020-08-29)
+
+
+### Features
+
+* **account module added:** account module added with many changes ([1e0fde0](https://github.com/smitray/nixt/commit/1e0fde0c1beffb84d8c5ed78803f1bfba3b95a3d))
+* **mikroorm configured successfully:** mikroOrm configured successfully ([d60a0ea](https://github.com/smitray/nixt/commit/d60a0eaf65ec8e14d19b8dcab2a31ff448d3554f))
+
+
+
+
+
 ## [1.1.1](https://github.com/smitray/nixt/compare/@nixt/graphql@1.1.0...@nixt/graphql@1.1.1) (2020-08-18)
 
 
