@@ -9,16 +9,21 @@ module.exports = {
   overrides: [
     {
       files: '*.js',
-      extends: ['eslint-config-airbnb/base', 'prettier']
+      extends: ['eslint-config-airbnb/base', 'prettier'],
     },
     {
       files: '*.ts',
       parser: '@typescript-eslint/parser',
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: [
-          './packages/*/tsconfig.json'
-        ]
+        project: ['./packages/**/tsconfig.json'],
+      },
+      settings: {
+        'import/resolver': {
+          typescript: {
+            project: ['packages/**/tsconfig.json'],
+          },
+        },
       },
       extends: [
         'airbnb-typescript',
@@ -28,9 +33,14 @@ module.exports = {
         'plugin:promise/recommended',
         'plugin:unicorn/recommended',
         'prettier/@typescript-eslint',
-        'prettier'
+        'prettier',
         // 'prettier/react',
-      ]
-    }
-  ]
+      ],
+      rules: {
+        'max-classes-per-file': ['error', 10],
+        'class-methods-use-this': [0],
+        'unicorn/no-useless-undefined': 'off',
+      },
+    },
+  ],
 };

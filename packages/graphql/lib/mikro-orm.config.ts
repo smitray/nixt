@@ -1,5 +1,7 @@
-import { Options } from 'mikro-orm';
+import { Options, MikroORM, EntityManager } from 'mikro-orm';
 import cfg from '@nixt/config';
+import { EntityRepository } from '@mikro-orm/mongodb';
+import Account from '@module/Account/account.entity';
 
 const mongoAuth = process.env.MONGO_USER
   ? `${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@`
@@ -13,6 +15,12 @@ const config: Options = {
   ensureIndexes: true,
   entities: ['dist/utils/entity/*.entity.js', 'dist/modules/**/*.entity.js'],
   entitiesTs: ['lib/utils/entity/*.entity.ts', 'lib/modules/**/*.entity.ts'],
+};
+
+export const DI = {} as {
+  orm: MikroORM;
+  em: EntityManager;
+  AccountRepository: EntityRepository<Account>;
 };
 
 export default config;
