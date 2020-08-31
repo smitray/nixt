@@ -9,6 +9,7 @@ import config from '@nixt/config';
 import { verify } from 'jsonwebtoken';
 import Account from '@module/Account/account.entity';
 import BaseContext from '@util/context/base.context';
+import authChecker from '@util/middleware/auth-checker';
 import mikroConfig, { DI } from '@DI';
 
 export default class Server {
@@ -40,10 +41,7 @@ export default class Server {
         schema: await buildSchema({
           resolvers: [`${__dirname}/modules/**/*.resolver.{ts,js}`],
           emitSchemaFile: false,
-          // authChecker: ({ context }) => {
-          //   console.log(context);
-          //   return true;
-          // },
+          authChecker,
         }),
         context: (context: Koa.Context): BaseContext | undefined => {
           const {

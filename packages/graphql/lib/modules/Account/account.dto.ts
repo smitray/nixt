@@ -1,4 +1,4 @@
-import { ArgsType, Field, registerEnumType, Int } from 'type-graphql';
+import { ArgsType, Field, registerEnumType } from 'type-graphql';
 import { Length, Matches, IsEmail, IsInt } from 'class-validator';
 
 export enum Role {
@@ -55,10 +55,25 @@ export class CreateAccountDTO extends AccountPasswordDTO {
   @Field(() => Status, { defaultValue: 'unverified' })
   status: Status;
 
-  @Field(() => Int, { nullable: true })
+  @Field({ nullable: true })
   @IsInt()
-  @Length(10, 10)
-  phone?: number;
+  phone: number;
+}
+
+@ArgsType()
+export class UpdateAccountDTO {
+  @Field({ nullable: true })
+  @Length(5, 15)
+  @Matches(/^\S*$/, { message: 'Username must not include spaces' })
+  username: string;
+
+  @Field({ nullable: true })
+  @IsEmail()
+  email: string;
+
+  @Field({ nullable: true })
+  @IsInt()
+  phone: number;
 }
 
 @ArgsType()

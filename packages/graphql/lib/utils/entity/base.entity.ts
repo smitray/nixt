@@ -15,6 +15,7 @@ export default abstract class BaseEntity {
   @Property()
   createdAt = new Date();
 
+  @Field(() => Date)
   @Property({ onUpdate: () => new Date() })
   updatedAt = new Date();
 }

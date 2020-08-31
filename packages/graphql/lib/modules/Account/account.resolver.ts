@@ -1,11 +1,23 @@
 import { AuthenticationError } from 'apollo-server-koa';
-import { Resolver, Mutation, Args, Query, Ctx } from 'type-graphql';
+import { Resolver, Mutation, Args, Query, Ctx, Authorized } from 'type-graphql';
 import { DI } from '@DI';
 import { genSaltSync, hashSync, compareSync } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import BaseContext from '@util/context/base.context';
+import GenericMessageDTOoutput from '@util/sharedDTO/generic-mesage-output-dto';
 import Account from './account.entity';
-import { CreateAccountDTO, LoginDTO } from './account.dto';
+import {
+  CreateAccountDTO,
+  LoginDTO,
+  AccountPasswordDTO,
+  UpdateAccountDTO,
+} from './account.dto';
+
+/**
+ * TODO: Account delete with Admin authorization
+ * ? Populate user or use dataloader
+ * * Need to add tests for all the resolvers
+ */
 
 @Resolver(Account)
 export default class AccountResolver {
@@ -90,6 +102,56 @@ export default class AccountResolver {
     return account;
   }
 
+  @Authorized()
+  @Mutation(() => GenericMessageDTOoutput)
+  async UpdatePassword(
+    @Ctx() { accountId }: BaseContext,
+    @Args() dto: AccountPasswordDTO,
+  ): Promise<GenericMessageDTOoutput> {
+    const { password, confirm } = dto;
+    if (password !== confirm) {
+      throw new Error('password did not match');
+    }
+    const account = await DI.AccountRepository.findOne({
+      id: accountId,
+    });
+    if (!account) {
+      throw new AuthenticationError('No user found');
+    }
+    account.password = this.generatePassword(password);
+    try {
+      await DI.AccountRepository.persistAndFlush(account);
+    } catch (error) {
+      throw new Error(error);
+    }
+
+    return {
+      message: 'Password successfully changed',
+    };
+  }
+
+  @Authorized()
+  @Mutation(() => GenericMessageDTOoutput)
+  async UpdateAccount(
+    @Ctx() { accountId }: BaseContext,
+    @Args() dto: UpdateAccountDTO,
+  ): Promise<GenericMessageDTOoutput> {
+    try {
+      await DI.AccountRepository.nativeUpdate(
+        {
+          id: accountId,
+        },
+        dto,
+      );
+      return {
+        message: 'Account has been updated successfully',
+      };
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  @Authorized()
   @Query(() => Account)
   async Me(@Ctx() { accountId }: BaseContext): Promise<Account> {
     const account = await DI.AccountRepository.findOne({

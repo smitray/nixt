@@ -1,5 +1,5 @@
 import { Entity, Property, Unique, Enum } from 'mikro-orm';
-import { ObjectType, Field, Int } from 'type-graphql';
+import { ObjectType, Field } from 'type-graphql';
 import BaseEntity from '@util/entity/base.entity';
 import { Role, Status } from './account.dto';
 
@@ -27,7 +27,7 @@ export default class Account extends BaseEntity {
   @Unique()
   email: string;
 
-  @Field(() => Int, { nullable: true })
+  @Field({ nullable: true })
   @Property({ nullable: true })
   phone?: number;
 
