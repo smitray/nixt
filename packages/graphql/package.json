@@ -27,7 +27,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register lib/index.ts",
     "prebuild": "rimraf ./dist",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "generate": "plop --plopfile generator/index.js"
   },
   "bugs": {
     "url": "https://github.com/smitray/nixt/issues"

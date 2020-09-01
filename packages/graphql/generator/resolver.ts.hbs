@@ -1,0 +1,51 @@
+import { Resolver, Mutation, Args, Query, Ctx, Authorized } from 'type-graphql';
+import { DI } from '@DI';
+import BaseContext from '@util/context/base.context';
+import GenericMessageDTOoutput from '@util/sharedDTO/generic-mesage-output-dto';
+import {{pascalCase name}} from './{{lowerCase name}}.entity';
+import Create{{pascalCase name}}DTO from './dto/{{lowerCase name}}-create';
+import Update{{pascalCase name}}DTO from './dto/{{lowerCase name}}-update';
+
+/**
+ * Module Description
+ */
+
+@Resolver({{pascalCase name}})
+export default class {{pascalCase name}}Resolver {
+  @Mutation(() => {{pascalCase name}})
+  async Create{{pascalCase name}}(@Args() dto: Create{{pascalCase name}}DTO): Promise<{{pascalCase name}}> {
+    const {  } = dto;
+    const {{lowerCase name}} = DI.{{pascalCase name}}Repository.create({
+      
+    });
+
+    try {
+      await DI.{{pascalCase name}}Repository.persistAndFlush({{lowerCase name}});
+    } catch (error) {
+      throw new Error(error);
+    }
+
+    return {{lowerCase name}};
+  }
+
+  @Authorized()
+  @Mutation(() => GenericMessageDTOoutput)
+  async Update{{pascalCase name}}(
+    @Ctx() { accountId }: BaseContext,
+    @Args() dto: Update{{pascalCase name}}DTO,
+  ): Promise<GenericMessageDTOoutput> {
+    try {
+      await DI.{{pascalCase name}}Repository.nativeUpdate(
+        {
+          id: accountId,
+        },
+        dto,
+      );
+      return {
+        message: '{{pascalCase name}} has been updated successfully',
+      };
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+}

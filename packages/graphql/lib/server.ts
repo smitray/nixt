@@ -7,10 +7,11 @@ import mount from 'koa-mount';
 import serveStatic from 'koa-static';
 import config from '@nixt/config';
 import { verify } from 'jsonwebtoken';
-import Account from '@module/Account/account.entity';
 import BaseContext from '@util/context/base.context';
 import authChecker from '@util/middleware/auth-checker';
 import mikroConfig, { DI } from '@DI';
+/* INJECT_IMPORT */
+import Account from '@module/Account/account.entity';
 
 export default class Server {
   app: Koa;
@@ -29,6 +30,7 @@ export default class Server {
       this.orm = await MikroORM.init(mikroConfig);
       DI.orm = this.orm;
       DI.em = this.orm.em;
+      /* INJECT_DI */
       DI.AccountRepository = this.orm.em.getRepository(Account);
     } catch (error) {
       throw new Error(error);
