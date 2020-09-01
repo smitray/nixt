@@ -37,7 +37,6 @@ module.exports = {
         // 'prettier/react',
       ],
       rules: {
-        'max-classes-per-file': ['error', 10],
         'class-methods-use-this': [0],
         'unicorn/no-useless-undefined': 'off',
       },
