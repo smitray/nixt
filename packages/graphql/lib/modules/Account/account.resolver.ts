@@ -6,10 +6,10 @@ import { sign } from 'jsonwebtoken';
 import BaseContext from '@util/context/base.context';
 import GenericMessageDTOoutput from '@util/sharedDTO/generic-mesage-output-dto';
 import Account from './account.entity';
-import CreateAccountDTO from './DTO/create-account';
-import LoginDTO from './DTO/account-login';
-import AccountPasswordDTO from './DTO/account-password';
-import UpdateAccountDTO from './DTO/update-account';
+import CreateAccountDTO from './dto/create-account';
+import LoginDTO from './dto/account-login';
+import AccountPasswordDTO from './dto/account-password';
+import UpdateAccountDTO from './dto/update-account';
 
 /**
  * TODO: Account delete with Admin authorization

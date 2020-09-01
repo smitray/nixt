@@ -25,7 +25,7 @@
     "url": "git+https://github.com/smitray/nixt.git"
   },
   "scripts": {
-    "dev": "nodemon",
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register lib/index.ts",
     "prebuild": "rimraf ./dist",
     "build": "tsc -p tsconfig.json"
   },
@@ -62,8 +62,7 @@
     "@types/koa-static": "^4.0.1",
     "@types/lodash": "^4.14.159",
     "@types/node": "^14.0.27",
-    "nodemon": "^2.0.4",
-    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.61",
     "tsconfig-paths": "^3.9.0"
   },
   "mikro-orm": {

@@ -1,7 +1,7 @@
 import { Entity, Property, Unique, Enum } from 'mikro-orm';
 import { ObjectType, Field } from 'type-graphql';
 import BaseEntity from '@util/entity/base.entity';
-import { Role, Status } from './DTO/create-account';
+import { Role, Status } from './dto/create-account';
 
 @ObjectType()
 @Entity({ tableName: 'accounts' })

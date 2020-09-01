@@ -1,8 +1,0 @@
-{
-  "watch": ["lib"],
-  "exec": "ts-node --project tsconfig.json -r tsconfig-paths/register lib/index.ts",
-  "ext": "js ts",
-  "env": {
-    "NODE_ENV": "development"
-  }
-}
