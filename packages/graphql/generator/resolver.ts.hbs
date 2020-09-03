@@ -31,13 +31,13 @@ export default class {{pascalCase name}}Resolver {
   @Authorized()
   @Mutation(() => GenericMessageDTOoutput)
   async Update{{pascalCase name}}(
-    @Ctx() { accountId }: BaseContext,
+    @Ctx() {  }: BaseContext,
     @Args() dto: Update{{pascalCase name}}DTO,
   ): Promise<GenericMessageDTOoutput> {
     try {
       await DI.{{pascalCase name}}Repository.nativeUpdate(
         {
-          id: accountId,
+          id: ,
         },
         dto,
       );

@@ -2,6 +2,7 @@ import { Options, MikroORM, EntityManager } from 'mikro-orm';
 import cfg from '@nixt/config';
 import { EntityRepository } from '@mikro-orm/mongodb';
 /* INJECT_IMPORT */
+import User from '@module/User/user.entity';
 import Account from '@module/Account/account.entity';
 
 const mongoAuth = process.env.MONGO_USER
@@ -22,6 +23,7 @@ export const DI = {} as {
   orm: MikroORM;
   em: EntityManager;
   /* INJECT_DI */
+  UserRepository: EntityRepository<User>;
   AccountRepository: EntityRepository<Account>;
 };
 

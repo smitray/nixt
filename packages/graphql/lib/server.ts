@@ -11,6 +11,7 @@ import BaseContext from '@util/context/base.context';
 import authChecker from '@util/middleware/auth-checker';
 import mikroConfig, { DI } from '@DI';
 /* INJECT_IMPORT */
+import User from '@module/User/user.entity';
 import Account from '@module/Account/account.entity';
 
 export default class Server {
@@ -31,6 +32,7 @@ export default class Server {
       DI.orm = this.orm;
       DI.em = this.orm.em;
       /* INJECT_DI */
+      DI.UserRepository = this.orm.em.getRepository(User);
       DI.AccountRepository = this.orm.em.getRepository(Account);
     } catch (error) {
       throw new Error(error);

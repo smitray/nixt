@@ -1,10 +1,11 @@
 import { AuthenticationError } from 'apollo-server-koa';
-import { Resolver, Mutation, Args, Query, Ctx, Authorized } from 'type-graphql';
+import { Resolver, Mutation, Args, Ctx, Authorized } from 'type-graphql';
 import { DI } from '@DI';
 import { genSaltSync, hashSync, compareSync } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import BaseContext from '@util/context/base.context';
 import GenericMessageDTOoutput from '@util/sharedDTO/generic-mesage-output-dto';
+import User from '@module/User/user.entity';
 import Account from './account.entity';
 import CreateAccountDTO from './dto/create-account';
 import LoginDTO from './dto/account-login';
@@ -12,9 +13,8 @@ import AccountPasswordDTO from './dto/account-password';
 import UpdateAccountDTO from './dto/update-account';
 
 /**
- * TODO: Account delete with Admin authorization
- * ? Populate user or use dataloader
- * * Need to add tests for all the resolvers
+ * * Account module to store all authetication methods
+ * TODO: Implement Tests
  */
 
 @Resolver(Account)
@@ -57,12 +57,14 @@ export default class AccountResolver {
       status,
       phone,
     });
+    const user = new User(account);
 
     try {
       await DI.AccountRepository.persistAndFlush(account);
+      await DI.UserRepository.persistAndFlush(user);
       account.token = await this.generateJWT({
         accountId: account.id,
-        userId: '',
+        userId: user.id,
         role: account.role,
       });
     } catch (error) {
@@ -91,9 +93,13 @@ export default class AccountResolver {
       throw new AuthenticationError('Wrong password');
     }
 
+    const user = await DI.UserRepository.findOneOrFail({
+      account: account.id,
+    });
+
     account.token = await this.generateJWT({
       accountId: account.id,
-      userId: '',
+      userId: user.id,
       role: account.role,
     });
 
@@ -147,18 +153,5 @@ export default class AccountResolver {
     } catch (error) {
       throw new Error(error);
     }
-  }
-
-  @Authorized()
-  @Query(() => Account)
-  async Me(@Ctx() { accountId }: BaseContext): Promise<Account> {
-    const account = await DI.AccountRepository.findOne({
-      id: accountId,
-    });
-    if (!account) {
-      throw new AuthenticationError('No user found');
-    }
-
-    return account;
   }
 }
