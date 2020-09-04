@@ -28,7 +28,7 @@ export default class Account extends BaseEntity {
   email: string;
 
   @Field({ nullable: true })
-  @Property({ nullable: true })
+  @Property()
   phone?: number;
 
   @Field()

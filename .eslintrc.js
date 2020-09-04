@@ -39,6 +39,7 @@ module.exports = {
       rules: {
         'class-methods-use-this': [0],
         'unicorn/no-useless-undefined': 'off',
+        // 'import/no-cycle': 'off',
       },
     },
   ],

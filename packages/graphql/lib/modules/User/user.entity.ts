@@ -20,7 +20,7 @@ export default class User extends BaseEntity {
   }
 
   @Field(() => Account)
-  @OneToOne(() => Account)
+  @OneToOne()
   account: Account;
 
   constructor(account: Account) {
