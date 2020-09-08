@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/smitray/nixt/compare/@nixt/config@1.5.0...@nixt/config@2.0.0) (2020-09-08)
+
+
+### Features
+
+* **config updated:** config updated ([8956356](https://github.com/smitray/nixt/commit/89563567cf456379c4efe9807d4dfc2e074e6d8c))
+* **onetoone relation:** admin - user one to one relation implemented ([3747ca0](https://github.com/smitray/nixt/commit/3747ca0785fa9af6e87f8ddb7b28043b9f0d951c))
+
+
+### BREAKING CHANGES
+
+* **config updated:** Config package is compelte
+
+
+
+
+
 # [1.5.0](https://github.com/smitray/nixt/compare/@nixt/config@1.1.1...@nixt/config@1.5.0) (2020-08-29)
 
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/smitray/nixt/compare/@nixt/graphql@1.5.0...@nixt/graphql@2.0.0) (2020-09-08)
+
+
+### Features
+
+* **account module:** account module ([6bf364d](https://github.com/smitray/nixt/commit/6bf364dd454055705c5dd68b6736b44b86a2dd2a))
+* **account updated:** account updated ([5fe89b7](https://github.com/smitray/nixt/commit/5fe89b7989076a73cc8c3abf4d0805dc16dcb0a9))
+* **config updated:** config updated ([8956356](https://github.com/smitray/nixt/commit/89563567cf456379c4efe9807d4dfc2e074e6d8c))
+* **file generator for graphql:** file generator with Plop.js ([bc7f193](https://github.com/smitray/nixt/commit/bc7f193e1310c94604d6a9979fd99cda84260b5e))
+* **onetoone relation:** admin - user one to one relation implemented ([3747ca0](https://github.com/smitray/nixt/commit/3747ca0785fa9af6e87f8ddb7b28043b9f0d951c))
+
+
+### BREAKING CHANGES
+
+* **config updated:** Config package is compelte
+
+
+
+
+
 # [1.5.0](https://github.com/smitray/nixt/compare/@nixt/graphql@1.1.1...@nixt/graphql@1.5.0) (2020-08-29)
 
 
