@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import { ApolloServer } from 'apollo-server-koa';
-import { MikroORM, IDatabaseDriver, Connection } from 'mikro-orm';
+import { MikroORM } from '@mikro-orm/core';
 import { buildSchema } from 'type-graphql';
 import cors from '@koa/cors';
 import mount from 'koa-mount';
@@ -9,7 +9,7 @@ import config from '@nixt/config';
 import { verify } from 'jsonwebtoken';
 import BaseContext from '@util/context/base.context';
 import authChecker from '@util/middleware/auth-checker';
-import mikroConfig, { DI } from '@DI';
+import { DI, config as mikroConfig } from '@DI';
 /* INJECT_IMPORT */
 import User from '@module/User/user.entity';
 import Account from '@module/Account/account.entity';
@@ -17,7 +17,7 @@ import Account from '@module/Account/account.entity';
 export default class Server {
   app: Koa;
 
-  public orm: MikroORM<IDatabaseDriver<Connection>>;
+  public orm: MikroORM;
 
   async init(): Promise<void> {
     this.app = new Koa();

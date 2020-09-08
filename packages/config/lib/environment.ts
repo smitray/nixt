@@ -21,22 +21,22 @@ const config: {
     graphUri: 'http://127.0.0.1:3000/graphql',
   },
   production: {
-    port: 3000,
+    port: 4000,
     host: '127.0.0.1',
     mongodb: {
-      db: 'nixt-dev',
+      db: 'nixt',
       mongoPort: 27017,
     },
-    graphUri: 'http://127.0.0.1:3000/graphql',
+    graphUri: 'http://127.0.0.1:4000/graphql',
   },
   test: {
-    port: 3000,
+    port: 6000,
     host: '127.0.0.1',
     mongodb: {
-      db: 'nixt-dev',
+      db: 'nixt-test',
       mongoPort: 27017,
     },
-    graphUri: 'http://127.0.0.1:3000/graphql',
+    graphUri: 'http://127.0.0.1:6000/graphql',
   },
 };
 

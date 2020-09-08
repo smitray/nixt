@@ -1,4 +1,4 @@
-import { PrimaryKey, Property, SerializedPrimaryKey } from 'mikro-orm';
+import { PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/core';
 import { ObjectId } from '@mikro-orm/mongodb';
 import { Field, ID, ObjectType } from 'type-graphql';
 

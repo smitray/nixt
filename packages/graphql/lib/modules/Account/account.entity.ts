@@ -1,4 +1,4 @@
-import { Entity, Property, Unique, Enum } from 'mikro-orm';
+import { Entity, Property, Unique, Enum } from '@mikro-orm/core';
 import { ObjectType, Field } from 'type-graphql';
 import BaseEntity from '@util/entity/base.entity';
 import { Role, Status } from './dto/create-account';
