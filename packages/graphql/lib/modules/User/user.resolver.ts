@@ -7,7 +7,7 @@ import {
   Query,
   FieldResolver,
 } from 'type-graphql';
-import { DI } from '@DI';
+import DI from '@DI';
 import { AuthenticationError } from 'apollo-server-koa';
 import Account from '@module/Account/account.entity';
 import BaseContext from '@util/context/base.context';

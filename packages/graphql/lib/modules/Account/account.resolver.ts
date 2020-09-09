@@ -1,6 +1,6 @@
 import { AuthenticationError } from 'apollo-server-koa';
 import { Resolver, Mutation, Args, Ctx, Authorized } from 'type-graphql';
-import { DI } from '@DI';
+import DI from '@DI';
 import { genSaltSync, hashSync, compareSync } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import BaseContext from '@util/context/base.context';
