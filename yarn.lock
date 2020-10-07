@@ -1478,25 +1478,24 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@mikro-orm/core@4.0.0-rc.8":
-  version "4.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/@mikro-orm/core/-/core-4.0.0-rc.8.tgz#73a0429bbe30d0868122bafd571ca4755e9581b3"
-  integrity sha512-bwZoWVlTERcQ3GLoR1nO+Ew3QRcFS4ovMdNW7IO1SvY6x5ptNriGK/0tCtnJcOfuuGPLmWi3lRkpm2Q/cBI4Tg==
+"@mikro-orm/core@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@mikro-orm/core/-/core-4.0.7.tgz#70b38bf49aa9751993df3dd7961e420b2ef15f11"
+  integrity sha512-wLf+fpEEyG6aMwMwOw8Ht0Suic7QeozNX8egKX72b43cloqPj2CvDYvx0GrYJEXec1N/Mmb7MW2Br4yyyTPQuQ==
   dependencies:
     ansi-colors "^4.1.1"
     clone "^2.1.2"
-    escaya "^0.0.37"
+    escaya "^0.0.49"
     fast-deep-equal "^3.1.3"
     fs-extra "^9.0.1"
     globby "^11.0.1"
     reflect-metadata "^0.1.13"
     strip-json-comments "^3.1.1"
-    uuid "^8.3.0"
 
-"@mikro-orm/mongodb@4.0.0-rc.8":
-  version "4.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/@mikro-orm/mongodb/-/mongodb-4.0.0-rc.8.tgz#44a8175161162118a3361e990e0ef754c648c332"
-  integrity sha512-HPamO9nHuOlwizxnKd9XhFOGMEjwGof3YYc1YHk/vTbfIpEDAw9ylHk0dEyVt/eCejvPeRPzK2uDG9pqsd0a/w==
+"@mikro-orm/mongodb@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@mikro-orm/mongodb/-/mongodb-4.0.7.tgz#dfc22180b9f70538c968d0c243aa7d53c87349a1"
+  integrity sha512-FA+yuSytyNw7FCjmco+f9l97nXpF3eRN5lxtBlcbpZgziYmTd8n3bE6wDxgKhmqDb3TD3go50kAqy74eJOiumA==
   dependencies:
     "@types/mongodb" "^3.5.26"
     mongodb "^3.6.0"
@@ -1835,6 +1834,11 @@
     "@types/express-serve-static-core" "*"
     "@types/qs" "*"
     "@types/serve-static" "*"
+
+"@types/faker@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.1.2.tgz#3d5a97d5648502d7fb1eeb2809ca105edcd0d59b"
+  integrity sha512-a3FADSHjjinczCwr7tTejoMZzbSS5vi70VCyns4C1idxJrDSRGZCQG0s27YppXLcoWrBOkwBbBsZ9vDRDpQK7A==
 
 "@types/fined@*":
   version "1.1.2"
@@ -2581,6 +2585,13 @@ apollo-server-plugin-base@^0.9.1:
   integrity sha512-kvrX4Z3FdpjrZdHkyl5iY2A1Wvp4b6KQp00DeZqss7GyyKNUBKr80/7RQgBLEw7EWM7WB19j459xM/TjvW0FKQ==
   dependencies:
     apollo-server-types "^0.5.1"
+
+apollo-server-testing@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/apollo-server-testing/-/apollo-server-testing-2.17.0.tgz#2c569e1584948878f41c39f626376e09d91b1a01"
+  integrity sha512-pb6ijqDbKUkeaJKP6P3sgT24X/1yErbBfobquyzOpkgyRCc93MeAY4xG3woA1/WZHQm0RN8xtsYelEKz05i14g==
+  dependencies:
+    apollo-server-core "^2.17.0"
 
 apollo-server-types@^0.5.1:
   version "0.5.1"
@@ -4437,12 +4448,10 @@ escape-string-regexp@^2.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz#a30304e99daa32e23b2fd20f51babd07cffca344"
   integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
 
-escaya@^0.0.37:
-  version "0.0.37"
-  resolved "https://registry.yarnpkg.com/escaya/-/escaya-0.0.37.tgz#072480094717cd6c4d71753f4d796de2ffcdabb8"
-  integrity sha512-FFKyKpeez0wE1LxyXc5naY6iFfePu0hYSeFTyDdyw7iK/t6f7nDtavmvKdoEOL9eHQdux2QkQz8sMNTOEZvbLw==
-  dependencies:
-    "@babel/parser" "^7.11.5"
+escaya@^0.0.49:
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/escaya/-/escaya-0.0.49.tgz#3295f5c3a1cb2c29cf8cd839fbf4240cc422f278"
+  integrity sha512-Wo5yFmYe+8+YSDztQzJ4LplPttNmQl4rb3TjyAR6zvZUgWiPKjacXLGvdtqprHCK+Z1mVWcAKACRKlYF9JgqDg==
 
 escodegen-wallaby@^1.6.19:
   version "1.6.31"
@@ -4891,6 +4900,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+faker@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-5.1.0.tgz#e10fa1dec4502551aee0eb771617a7e7b94692e8"
+  integrity sha512-RrWKFSSA/aNLP0g3o2WW1Zez7/MnMr7xkiZmoCfAGZmdkDQZ6l2KtuXHN5XjdvpRjDl8+3vf+Rrtl06Z352+Mw==
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -10420,6 +10434,17 @@ ts-node@^8.10.2:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
+ts-node@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.0.0.tgz#e7699d2a110cc8c0d3b831715e417688683460b3"
+  integrity sha512-/TqB4SnererCDR/vb4S/QvSZvzQMJN8daAslg7MeaiHvD8rDZsSfXmNeNumyZZzMned72Xoq/isQljYSt8Ynfg==
+  dependencies:
+    arg "^4.1.0"
+    diff "^4.0.1"
+    make-error "^1.1.1"
+    source-map-support "^0.5.17"
+    yn "3.1.1"
+
 tsconfig-paths@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.9.0.tgz#098547a6c4448807e8fcb8eae081064ee9a3c90b"
@@ -10518,7 +10543,7 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-type-graphql@^1.0.0-rc.3:
+type-graphql@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-1.0.0.tgz#7413fd5ff959f1a738615ecfad6e2ca2d68572bf"
   integrity sha512-ejXSEmqewrv9MX/0XOSKBc7utjrF6N0UeZJQ0w/R/Ene4Or9/cA+8iLQnuqgBDlNpXIdcq4rSvrk3mUMAIqOQA==
