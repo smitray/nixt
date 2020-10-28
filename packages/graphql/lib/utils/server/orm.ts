@@ -5,7 +5,7 @@ import cfg from '@nixt/config';
 import User from '@module/User/user.entity';
 import Account from '@module/Account/account.entity';
 
-export default async (clientUrl: string, dropData = false): Promise<void> => {
+export default async (clientUrl: string): Promise<void> => {
   try {
     const orm = await MikroORM.init({
       type: 'mongo',
@@ -27,13 +27,13 @@ export default async (clientUrl: string, dropData = false): Promise<void> => {
     /* INJECT_DI */
     DI.UserRepository = orm.em.getRepository(User);
     DI.AccountRepository = orm.em.getRepository(Account);
-
-    if (dropData) {
-      /* INJECT_NATIVE_DELETE */
-      DI.UserRepository.nativeDelete({});
-      DI.AccountRepository.nativeDelete({});
-    }
   } catch (error) {
     throw new Error(error);
   }
+};
+
+export const dropDB = (): void => {
+  /* INJECT_NATIVE_DELETE */
+  DI.UserRepository.nativeDelete({});
+  DI.AccountRepository.nativeDelete({});
 };

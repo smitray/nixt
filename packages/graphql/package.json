@@ -26,7 +26,8 @@
     "build": "tsc",
     "postbuild": "ef-tspm",
     "generate": "plop --plopfile generator/index.js",
-    "start": "node dist/index"
+    "start": "node dist/index",
+    "test": "jest"
   },
   "bugs": {
     "url": "https://github.com/smitray/nixt/issues"
@@ -42,7 +43,6 @@
     "class-validator": "^0.12.2",
     "date-fns": "^2.15.0",
     "dotenv": "^8.2.0",
-    "faker": "^5.1.0",
     "graphql": "^15.3.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.0",
@@ -65,6 +65,7 @@
     "@types/lodash": "^4.14.159",
     "@types/node": "^14.0.27",
     "apollo-server-testing": "^2.17.0",
+    "faker": "^5.1.0",
     "ts-node": "^9.0.0",
     "ts-node-dev": "^1.0.0-pre.61",
     "tsconfig-paths": "^3.9.0"

@@ -8,5 +8,4 @@ module.exports = {
     '^@util/(.*)$': '<rootDir>/lib/utils/$1',
     '^@DI': '<rootDir>/lib/mikro-orm.config.ts',
   },
-  globalSetup: './lib/setup-test.ts',
 };
